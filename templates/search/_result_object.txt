@@ -1,0 +1,17 @@
+{% with obj=result.object %}
+<div class="accordion-group">
+    <div class="accordion-heading">
+        <div class="accordion-toggle" href="#collapse_{{ obj.id }}" data-toggle="collapse" data-parent="#accordion2">
+            <h4>{{ obj.name }} - {{ obj.brewery }}</h4><br>
+            Score: {{ obj.BA_score }} | Style: {{ obj.style}} | ABV: {{ obj.ABV}}%
+        </div>
+        <div> </div>
+    </div>
+    <div id="collapse_{{ obj.id }}" class="accordion-body collapse">
+        <div class="accordion-inner">
+            {{ obj.reviews | truncatewords:"100" }}
+            <a href="{{ obj.url}}"> beer advocate </a>
+        </div>
+    </div>
+</div>
+{% endwith %}

@@ -1,0 +1,7 @@
+venv
+*.pyc
+staticfiles
+*.tgz
+beeradvocate_crawl/beer_db
+apache-solr-3.5.0
+!apache-solr-3.5.0/example/solr/conf/schema.xml
